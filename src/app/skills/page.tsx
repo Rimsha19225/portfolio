@@ -1,37 +1,34 @@
-"use client";
-import React, { useEffect, useState } from "react";
-
-const skillsData = [
-  { name: "HTML", degree: 95, color: "cyan" },
-  { name: "CSS", degree: 75, color: "blue" },
-  { name: "JavaScript", degree: 67, color: "cyan" },
-  { name: "TypeScript", degree: 70, color: "blue" },
-  { name: "Python", degree: 50, color: "cyan" },
-  { name: "Next.js", degree: 55, color: "blue" },
-];
+"use client"
+import React, { useEffect } from "react";
 
 const Skills = () => {
-  const [degrees, setDegrees] = useState(Array(skillsData.length).fill(0));
-
   useEffect(() => {
-    const animateSkills = () => {
-      setDegrees((prevDegrees) => {
-        const updatedDegrees = prevDegrees.map((degree, index) => {
-          if (degree < skillsData[index].degree) {
-            return degree + 1;
-          }
-          return degree;
-        });
-        return updatedDegrees;
-      });
+    const circles = document.querySelectorAll(".circle");
+    circles.forEach((progress) => {
+      let degree = 0;
+      const targetDegree = parseInt(progress.getAttribute("data-degree")?? "0");
+      const color = progress.getAttribute("data-color");
+      const number: Element | null = progress.querySelector(".number");
 
-      if (degrees.some((degree, index) => degree < skillsData[index].degree)) {
-        requestAnimationFrame(animateSkills);
-      }
-    };
+      const interval = setInterval(() => {
+        degree += 1;
+        if (degree > targetDegree) {
+          clearInterval(interval);
+          return;
+        }
+        const progress = document.querySelector('.progress') as HTMLElement;
+        progress.style.background = `conic-gradient(${color} ${degree}%, #222 0%)`;
+        const number = document.querySelector('.number');
+        if (number instanceof HTMLElement) {
+          number.innerHTML = `${degree ?? 0}<span>%</span>`;  // Fallback to 0 if degree is null or undefined
 
-    requestAnimationFrame(animateSkills);
-  }, [degrees]);
+          // Check if color is not null, otherwise provide a default value
+          number.style.color = color ?? 'black';  // Default to 'black' if color is null
+        }
+
+      }, 10);
+    });
+  }, []);
 
   return (
     <div className="skills w-full h-[105vh] bg-fixed">
@@ -65,23 +62,30 @@ const Skills = () => {
         </div>
       </div>
       <div className="bar mt-10 flex gap-4 justify-center">
-        {skillsData.map((skill, index) => (
-          <div
-            key={skill.name}
-            className="circle relative flex flex-col items-center justify-center"
-            style={{
-              background: `conic-gradient(${skill.color} ${degrees[index]}%, #222 0%)`,
-              width: "120px",
-              height: "120px",
-              borderRadius: "50%",
-            }}
-          >
-            <h2 className="number text-2xl font-bold" style={{ color: skill.color }}>
-              {degrees[index]}<span>%</span>
-            </h2>
-            <h4>{skill.name}</h4>
-          </div>
-        ))}
+        <div className="circle" data-degree={95} data-color="cyan">
+          <h2 className="number">95<span>%</span></h2>
+          <h4>HTML</h4>
+        </div>
+        <div className="circle" data-degree={75} data-color="blue">
+          <h2 className="number">75<span>%</span></h2>
+          <h4>CSS</h4>
+        </div>
+        <div className="circle" data-degree={67} data-color="cyan">
+          <h2 className="number">67<span>%</span></h2>
+          <h4>JavaScript</h4>
+        </div>
+        <div className="circle" data-degree={70} data-color="blue">
+          <h2 className="number">70<span>%</span></h2>
+          <h4>TypeScript</h4>
+        </div>
+        <div className="circle" data-degree={50} data-color="cyan">
+          <h2 className="number">50<span>%</span></h2>
+          <h4>Python</h4>
+        </div>
+        <div className="circle" data-degree={55} data-color="blue">
+          <h2 className="number">55<span>%</span></h2>
+          <h4>Next.js</h4>
+        </div>
       </div>
     </div>
   );
