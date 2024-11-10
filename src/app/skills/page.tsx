@@ -8,7 +8,7 @@ const Skills = () => {
       let degree = 0;
       const targetDegree = parseInt(progress.getAttribute("data-degree")?? "0");
       const color = progress.getAttribute("data-color");
-      const number: Element | null = progress.querySelector(".number");
+      // const number: Element | null = progress.querySelector(".number");
 
       const interval = setInterval(() => {
         degree += 1;
@@ -19,12 +19,12 @@ const Skills = () => {
         const progress = document.querySelector('.progress') as HTMLElement;
         progress.style.background = `conic-gradient(${color} ${degree}%, #222 0%)`;
         const number = document.querySelector('.number');
-        if (number instanceof HTMLElement) {
-          number.innerHTML = `${degree ?? 0}<span>%</span>`;  // Fallback to 0 if degree is null or undefined
+if (number instanceof HTMLElement) {
+  number.innerHTML = `${degree ?? 0}<span>%</span>`;  // Fallback to 0 if degree is null or undefined
 
-          // Check if color is not null, otherwise provide a default value
-          number.style.color = color ?? 'black';  // Default to 'black' if color is null
-        }
+  // Check if color is not null, otherwise provide a default value
+  number.style.color = color ?? 'black';  // Default to 'black' if color is null
+}
 
       }, 10);
     });
