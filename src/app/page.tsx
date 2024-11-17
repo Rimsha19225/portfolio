@@ -33,5 +33,5 @@ export default function Home() {
         <p className="font-semibold text-xl text-justify">Beyond coding, I’m a cricket enthusiast and enjoy activities that keep me learning and creating. My aim is to start my professional journey where I can leverage my technical skills, problem-solving abilities, and leadership experience. I’m excited to contribute to a forward-thinking organization, develop my skills further, and make a positive impact in the tech industry.</p>
       </div>
     </div>
-  );p
+  );
 }
