@@ -15,7 +15,7 @@ const Navbar = () => {
       </div>
       <div className='flex gap-6 mr-16 mt-[1.8rem] text-xl font-semibold font-sans'>
         <Link href={"/"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>Home</Link>
-        <Link href={"/about"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>About</Link>
+        <Link href={"/about"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>About Us</Link>
         <Link href={"/skills"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>Skills</Link>
         <Link href={"education"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>Education</Link>
         <Link href={"work"} className='hover:underline hover:underline-offset-[6px]' style={{textDecorationThickness:"3px"}}>Work</Link>

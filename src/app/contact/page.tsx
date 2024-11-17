@@ -3,7 +3,7 @@ import Link from "next/link"
 const Contact = () => {
   return (
     <div className="contact w-full h-screen bg-fixed">
-      <h1 className="text-center text-cyan-500 font-bold text-4xl pt-28">Contact Me</h1>
+      <h1 className="text-center text-cyan-500 shadow-black shadow-2xl font-bold text-4xl pt-28">Contact Me</h1>
       <div className='w-[60%] h-[72vh] ml-72 mt-1 bg-gradient-to-tl from-blue-400 to-cyan-200 rounded-3xl p-8 border-solid border-y-4 border-black shadow-2xl shadow-cyan-500/70'>
         <form action="Post">
             <legend className='text-xl font-bold text-blue-900'>Name:</legend>

@@ -11,7 +11,7 @@ import resuma_form from "../../../public/images/resuma_form.jpg"
 
 const Work = () => {
   return (
-    <div className="work w-full h-auto flex justify-center items-center gap-2 align-center bg-fixed pb-14">
+    <div className="work w-full h-auto flex justify-center items-center shadow-black shadow-2xl gap-2 align-center bg-fixed pb-14">
       <div className="grid grid-cols-3 gap-10 pt-40 justify-center items-center">
         <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
           <Image src={PCB} alt="" width={150} height={150} className="w-screen h-48"/>

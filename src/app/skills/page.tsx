@@ -62,8 +62,8 @@ if (number instanceof HTMLElement) {
         </div>
       </div>
       <div className="bar mt-10 flex gap-4 justify-center">
-        <div className="circle" data-degree={95} data-color="cyan">
-          <h2 className="number">95<span>%</span></h2>
+        <div className="circle" data-degree={98} data-color="cyan">
+          <h2 className="number">98<span>%</span></h2>
           <h4>HTML</h4>
         </div>
         <div className="circle" data-degree={75} data-color="blue">

@@ -195,10 +195,6 @@ aside{
   border-radius: 50%;
 }
 
-.aside-portion img:hover{
-  width: 210px;
-  height: 210px;
-}
 
 .aside-portion li{
   font-weight: bold;
@@ -299,6 +295,53 @@ h2{
 
 /* Mobile devices (max-width: 600px) */
 @media (max-width: 600px) {
+  /* .home{
+    width: 100%;
+    max-width: 95%;
+    padding: 10px;
+    height: auto;
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  .main{
+    flex-direction: column;
+
+  }
+
+  .home_2{
+    width: 100%;
+    max-width: 95%;
+    margin-top: 80vh;
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .home_2 h2{
+    font-size: 1.5rem;
+  }
+
+  .home_2 p{
+    font-size: 1rem;
+  }
+
+  .home_right{
+    width: 15rem;
+  }
+
+  .home_right h3{
+    font-size: 1.5rem;
+  }
+
+  .home_right p{
+    font-size: 1rem;
+  } */
+
+  .box{
+    width: 15rem;
+    height: 15rem;
+  }
+
   .body{
       height: 150vh;
   }
@@ -365,6 +408,14 @@ h2{
   .content p {
       font-size: 12px;
   }
+
+  /* .footer{
+    height: 25rem;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 150vh;
+    background-color: #d1d5db;
+  } */
 }
 
 /* skills progress bar section */
@@ -438,6 +489,12 @@ h2{
 
 .work{
   background-image: url(../../public/images/work_bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.cv{
+  background-image: url(../../public/images/cv_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }

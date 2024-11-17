@@ -4,8 +4,8 @@ import Image from "next/image"
 const Resume = () => {
   return (
     <div>
-      <div className="body">
-        <h1>Rimsha Arshad Resume</h1>
+      <div className="cv body pb-11">
+        <h1 className="mt-5 mb-5"></h1>
         <div className="container">
             <div className="aside-portion">
                 <aside className="w-[40%] float-left bg-teal-200 p-[18px] shadow-xl shadow-cyan-300/70">
