@@ -8,6 +8,8 @@ import food from "../../../public/images/food_ass.jpg"
 import resuma from "../../../public/images/resuma_ass.jpg"
 import world from "../../../public/images/world.jpg"
 import resuma_form from "../../../public/images/resuma_form.jpg"
+import stopwatch from "../../../public/images/stopwatch.jpeg"
+import alarm from "../../../public/images/alarm.jpg"
 
 const Work = () => {
   return (
@@ -19,6 +21,11 @@ const Work = () => {
           <Link href={"https://github.com/Rimsha19225/PCB"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
         </div>
         <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
+          <Image src={alarm} alt="" width={150} height={150} className="w-screen h-48"/>
+          <Link href={"https://alarm-taupe.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">Alarm</button></Link>
+          <Link href={"https://github.com/Rimsha19225/alarm"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
+        </div>
+        <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
           <Image src={world} alt="" width={150} height={150} className="w-screen h-48"/>
           <Link href={"https://world-country-eta.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">Countries Detail</button></Link>
           <Link href={"https://github.com/Rimsha19225/world_country"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
@@ -27,6 +34,11 @@ const Work = () => {
           <Image src={panacloud} alt="" width={150} height={150} className="w-screen h-48"/>
           <Link href={"https://final-assignment-red.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">Pana Cloud</button></Link>
           <Link href={"https://github.com/Rimsha19225/final-assignment"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
+        </div>
+        <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
+          <Image src={stopwatch} alt="" width={150} height={150} className="w-screen h-48"/>
+          <Link href={"https://timer-iota-flax.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">Stop Watch</button></Link>
+          <Link href={"https://github.com/Rimsha19225/timer"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
         </div>
         <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
           <Image src={intro} alt="" width={150} height={150} className="w-screen h-48"/>
