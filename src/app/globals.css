@@ -2,13 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
-.home{
+.home {
   background-image: url(../../public/images/home_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.box{
+/* @keyframes typewriter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+} */
+
+.typewriter-effect {
+  display: block;
+  overflow: hidden; /* Ensures text hides during animation */
+  white-space: nowrap; /* Prevents text wrapping */
+  border-right: 2px solid #000; /* Adds the blinking cursor effect */
+  animation: typewriter 6s steps(50, end) infinite, blink 1.5s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
+}
+
+.box {
   position: relative;
   width: 400px;
   height: 400px;
@@ -17,29 +44,29 @@
   overflow: hidden;
 }
 
-.box::before{
-  content: '';
+.box::before {
+  content: "";
   position: absolute;
-  inset: -10px 140px;
-  background: linear-gradient(315deg, #06b6d4, #3b82f6);
+  inset: -50px 50px;
+  background: linear-gradient(315deg, #45adb0, #45adb0);
   transition: 0.5s;
   animation: animate 4s linear infinite;
 }
 
-.box:hover::before{
+.box:hover::before {
   inset: -20px 0px;
 }
 
-@keyframes animate{
-  0%{
+@keyframes animate {
+  0% {
     transform: rotate(0deg);
   }
-  100%{
+  100% {
     transform: rotate(360deg);
   }
 }
 
-.box::after{
+.box::after {
   content: "";
   position: absolute;
   inset: 6px;
@@ -48,7 +75,7 @@
   z-index: 1;
 }
 
-.content{
+.content {
   position: absolute;
   inset: 30px;
   border: 6px solid #070a1c;
@@ -61,7 +88,7 @@
   flex-direction: column;
 }
 
-.content .image{
+.content .image {
   position: absolute;
   top: 0;
   left: 0;
@@ -73,11 +100,11 @@
   z-index: 3;
 }
 
-.box:hover .content .image{
+.box:hover .content .image {
   opacity: 0;
 }
 
-.content h4{
+.content h4 {
   position: relative;
   font-size: 1.5em;
   text-align: center;
@@ -87,12 +114,12 @@
   text-transform: uppercase;
 }
 
-.content h4 span{
+.content h4 span {
   font-weight: 400;
   font-size: 0.75em;
 }
 
-.content .a{
+.content .a {
   position: relative;
   margin-top: 10px;
   padding: 10px 20px;
@@ -106,72 +133,71 @@
   transition: 0.5s;
 }
 
-.content .a:hover{
+.content .a:hover {
   letter-spacing: 0.2em;
 }
 
-.about{
+.about {
   background-image: url(../../public/images/about_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.skills{
+.skills {
   background-image: url(../../public/images/skills_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.sec1{
+.sec1 {
   background: linear-gradient(30deg, #60a5fa, #87e5f2, #60a5fa);
   padding: 2rem;
   border-radius: 1rem;
 }
 
-.sec2{
+.sec2 {
   background: linear-gradient(150deg, #60a5fa, #87e5f2, #60a5fa);
   padding: 2rem;
   border-radius: 1rem;
 }
 
-.education{
+.education {
   background-image: url(../../public/images/education_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.body{
+.body {
   width: 100%;
   height: auto;
   background-color: #423e3e;
   padding-top: 5rem;
 }
 
-h1{
+h1 {
   font-size: 30px;
   color: beige;
   padding: 20px 0;
   text-align: center;
 }
 
-h2{
+h2 {
   font-size: 25px;
 }
 
-
-h1:hover{
+h1:hover {
   font-size: 32px;
 }
 
-ul{
+ul {
   list-style-type: none;
 }
 
-.aside-portion p{
+.aside-portion p {
   font-size: 19px;
 }
 
-.container{
+.container {
   width: 700px;
   height: 900px;
   padding: 20px;
@@ -181,32 +207,31 @@ ul{
   background: linear-gradient(to left top, #4747fa, #63f5f5);
 }
 
-aside{
+aside {
   height: 860px;
 }
 
-.aside-portion h2{
+.aside-portion h2 {
   padding: 35px 0 15px 0;
 }
 
-.aside-portion img{
+.aside-portion img {
   width: 200px;
   height: 200px;
   border-radius: 50%;
 }
 
-
-.aside-portion li{
+.aside-portion li {
   font-weight: bold;
   padding: 9px 0;
   font-size: 15px;
 }
 
-.aside-portion i{
+.aside-portion i {
   font-size: 35px;
 }
 
-.top-area h2{
+.top-area h2 {
   width: 100%;
   height: 200px;
   background-color: #99f6e4;
@@ -216,23 +241,23 @@ aside{
   border-radius: 1rem;
 }
 
-.top-area h2:hover{
+.top-area h2:hover {
   font-size: 68px;
 }
 
-h2{
+h2 {
   font-size: 25px;
   color: blue;
   font-weight: bolder;
 }
 
-.content p{
+.content p {
   padding-top: 10px;
   color: bisque;
   text-shadow: -2px 1px 2px black;
 }
 
-.content h2{
+.content h2 {
   padding-top: 15px;
 }
 
@@ -240,56 +265,56 @@ h2{
 
 /* Tablet devices (max-width: 900px) */
 @media (max-width: 900px) {
-  .body{
-      height: 150vh;
+  .body {
+    height: 150vh;
   }
 
   .container {
-      width: 100%;
-      height: 110vh;
-      max-width: 90%;
-      padding: 15px;
-      margin-left: 5px;
+    width: 100%;
+    height: 110vh;
+    max-width: 90%;
+    padding: 15px;
+    margin-left: 5px;
   }
 
   .top-area h2 {
-      width: 100%;
-      height: 130px;
-      font-size: 40px;
+    width: 100%;
+    height: 130px;
+    font-size: 40px;
   }
 
-  .top-area h2:hover{
-      font-size: 43px;
+  .top-area h2:hover {
+    font-size: 43px;
   }
 
   .aside-portion img {
-      width: 150px;
-      height: 150px;
+    width: 150px;
+    height: 150px;
   }
 
   .aside-portion img:hover {
-      width: 160px;
-      height: 160px;
+    width: 160px;
+    height: 160px;
   }
 
   h1 {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   h1:hover {
-      font-size: 30px;
+    font-size: 30px;
   }
 
   h2 {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   h2:hover {
-      font-size: 24px;
+    font-size: 24px;
   }
 
   .aside-portion p {
-      font-size: 17px;
+    font-size: 17px;
   }
 }
 
@@ -337,76 +362,76 @@ h2{
     font-size: 1rem;
   } */
 
-  .box{
+  .box {
     width: 15rem;
     height: 15rem;
   }
 
-  .body{
-      height: 150vh;
+  .body {
+    height: 150vh;
   }
 
   .container {
-      width: 100%;
-      max-width: 95%;
-      padding: 10px;
+    width: 100%;
+    max-width: 95%;
+    padding: 10px;
   }
 
   .top-area h2 {
-      font-size: 20px;
-      padding: 40px;
+    font-size: 20px;
+    padding: 40px;
   }
 
   .aside-portion img {
-      width: 100px;
-      height: 100px;
+    width: 100px;
+    height: 100px;
   }
 
   .aside-portion img:hover {
-      width: 105px;
-      height: 105px;
+    width: 105px;
+    height: 105px;
   }
 
-  aside{
-      width: 30%;
-      height: 707px;
+  aside {
+    width: 30%;
+    height: 707px;
   }
 
   h1 {
-      font-size: 25px;
+    font-size: 25px;
   }
 
   h1:hover {
-      font-size: 28px;
+    font-size: 28px;
   }
 
   h2 {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   h2:hover {
-      font-size: 22px;
+    font-size: 22px;
   }
 
   .aside-portion p {
-      font-size: 15px;
+    font-size: 15px;
   }
 
   .aside-portion li {
-      padding: 10px 0;
-      font-size: 9px;
+    padding: 10px 0;
+    font-size: 9px;
   }
 
   .aside-portion i {
-      font-size: 20px;
+    font-size: 20px;
   }
 
   .top-area h2 {
-      font-size: 40px;
+    font-size: 40px;
   }
 
   .content p {
-      font-size: 12px;
+    font-size: 12px;
   }
 
   /* .footer{
@@ -420,7 +445,7 @@ h2{
 
 /* skills progress bar section */
 
-.bar{
+.bar {
   position: relative;
   display: flex;
   justify-content: center;
@@ -428,7 +453,7 @@ h2{
   gap: 1rem;
 }
 
-.bar .circle{
+.bar .circle {
   position: relative;
   display: flex;
   justify-content: center;
@@ -439,7 +464,7 @@ h2{
   border-radius: 50%;
 }
 
-.bar .circle::before{
+.bar .circle::before {
   content: "";
   position: absolute;
   inset: 5px;
@@ -448,7 +473,7 @@ h2{
   opacity: 0.8;
 }
 
-.bar .circle::after{
+.bar .circle::after {
   content: "";
   position: absolute;
   width: 140px;
@@ -456,10 +481,13 @@ h2{
   background: #333;
   border: 15px solid #b1c4c4;
   border-radius: 50%;
-  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5), inset 0 4px 2px rgba(0, 0, 0, 0, 0.25), inset0 -2px 2px rgba(255, 255, 255, 0.5);
+  box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0, 0.75), 0 -2px 2px rgba(255, 255, 255, 0.5),
+    inset 0 4px 2px rgba(0, 0, 0, 0, 0.25),
+    inset0 -2px 2px rgba(255, 255, 255, 0.5);
 }
 
-.bar .circle .number{
+.bar .circle .number {
   position: relative;
   color: #fff;
   z-index: 10;
@@ -467,34 +495,85 @@ h2{
   font-size: 2em;
 }
 
-.bar .circle h4{
+.bar .circle h4 {
   position: relative;
   color: #fff;
   z-index: 10;
-  font-weight: 500;font-size: 0.8em;
+  font-weight: 500;
+  font-size: 0.8em;
   text-transform: uppercase;
   line-height: 0.6em;
 }
 
-.bar .circle .number span{
+.bar .circle .number span {
   font-size: 0.5em;
   font-weight: 500;
 }
 
-.contact{
+.contact {
   background-image: url(../../public/images/contact_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.work{
+.work {
   background-image: url(../../public/images/work_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-.cv{
+.cv {
   background-image: url(../../public/images/cv_bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.container {
+  display: flex;
+  padding-top: 120px;
+  justify-content: center;
+  gap: 30px;
+}
+
+.circular-progress {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background: conic-gradient(#fff 360deg, #ededed 0deg); /* Reverse gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.circular-progress::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  background-color: #fd6f00;
+}
+
+.progress-value {
+  margin-top: 180px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fd6f00;
+}
+
+.text {
+  position: absolute;
+  margin-top: 180px;
+  bottom: -30px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #606060;
+}
+
+.icon {
+  position: absolute;
+  top: 35px;
 }

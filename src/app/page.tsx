@@ -2,6 +2,11 @@ import Link from "next/link";
 import Image from "next/image"
 import profile from "../../public/images/profile.png"
 import Icon from "@/components/icon";
+import About from "./about/page";
+import Education from "./education/page";
+import Skills from "./skills/page";
+import Work from "./work/page";
+import Contact from "./contact/page";
 
 export default function Home() {
   return (
@@ -10,7 +15,14 @@ export default function Home() {
         <div className=" w-[32rem] bg-gradient-to-tl from-cyan-300 to-blue-400 p-6 rounded-2xl border-y-4 border-black shadow-xl shadow-cyan-300/70">
           <h3 className="text-[2.8rem] font-sans font-bold cursor-pointer">RIMSHA ARSHAD</h3>
           <hr/>
-          <p className="text-xl cursor-pointer whitespace-normal mt-1 text-justify">&ldquo;As a passionate developer with a strong foundation in web technologies, I craft responsive & interactive digital experiences. From front-end finesse to back-end logic, I blend creativity with technical expertise to bring ideas to life.&ldquo;</p>
+          <div className="text-xl cursor-pointer mt-1 text-justify">
+      <span className="typewriter-effect">
+        “As a passionate developer with a strong foundation in web technologies, 
+        I craft responsive & interactive digital experiences. From front-end finesse 
+        to back-end logic, I blend creativity with technical expertise to bring ideas 
+        to life.”
+      </span>
+    </div>
           <Icon />
         </div>
         <div className="box">
@@ -32,6 +44,11 @@ export default function Home() {
         <p className="font-semibold text-xl text-justify">Technically, I’m skilled in TypeScript, HTML, CSS, and React, with experience in tools like Next.js, Inquirer.js, and jsPDF. I’m comfortable building responsive web components, managing user prompts, and creating dynamic forms with clean, structured code. I enjoy adding interactivity to my projects by toggling elements, updating data dynamically, and generating shareable content such as PDFs. Additionally, I have experience with ESLint and CSS modules for maintaining consistency and style in my projects.</p>
         <p className="font-semibold text-xl text-justify">Beyond coding, I’m a cricket enthusiast and enjoy activities that keep me learning and creating. My aim is to start my professional journey where I can leverage my technical skills, problem-solving abilities, and leadership experience. I’m excited to contribute to a forward-thinking organization, develop my skills further, and make a positive impact in the tech industry.</p>
       </div>
+      <About/>
+      <Education />
+      <Skills />
+      <Work />
+      <Contact />
     </div>
   );
 }

@@ -10,11 +10,17 @@ import world from "../../../public/images/world.jpg"
 import resuma_form from "../../../public/images/resuma_form.jpg"
 import stopwatch from "../../../public/images/stopwatch.jpeg"
 import alarm from "../../../public/images/alarm.jpg"
+import e_commerce from "../../../public/images/e_commerce.png"
 
 const Work = () => {
   return (
     <div className="work w-full h-auto flex justify-center items-center shadow-black shadow-2xl gap-2 align-center bg-fixed pb-14">
       <div className="grid grid-cols-3 gap-10 pt-40 justify-center items-center">
+        <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
+          <Image src={e_commerce} alt="e_commerce" className="w-screen h-48"/>
+          <Link href={"https://ui-ux-hackathon-lake.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">e_Commerce</button></Link>
+          <Link href={"https://github.com/Rimsha19225/UI_UX_hackathon"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-4 p-3 font-semibold text-xl">Source Code</button></Link>
+        </div>
         <div className="w-[20rem] h-[22rem] border-solid border-y-4 border-black bg-cyan-200 rounded-xl shadow-2xl shadow-cyan-500/70">
           <Image src={PCB} alt="" width={150} height={150} className="w-screen h-48"/>
           <Link href={"https://pcb-bice.vercel.app/"} target="_blank"><button className="w-[20rem] bg-blue-400 text-black text-center mt-3 p-3 font-semibold text-xl">PCB</button></Link>
